@@ -1,0 +1,189 @@
+/* =========================
+CONFIGURAÇÕES GERAIS
+========================= */
+
+:root {
+    --cor-fundo: #0D1117;
+    --cor-fundo-secundario: #161B22;
+    --cor-texto: #F0F6FC;
+    --cor-texto-secundario: #8B949E;
+    --cor-destaque: #58A6FF;
+    --cor-destaque-forte: #1F6FEB;
+    --cor-borda: #30363D;
+    }
+    
+    
+    html {
+    scroll-behavior: smooth;
+    }
+    
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    }
+    
+    /* =========================
+    NAVEGAÇÃO
+    ========================= */
+    
+    header {
+    background-color: rgba(13, 17, 23, 0.95);
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+    
+    nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    }
+    
+    nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+    color: var(--cor-destaque);
+    }
+    
+    /* =========================
+    CONTEÚDO PRINCIPAL
+    ========================= */
+    
+    main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    
+    section {
+    min-height: 70vh;
+    padding: 100px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    }
+    
+    section:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    }
+    
+    section > p {
+    color: var(--cor-texto-secundario);
+    max-width: 700px;
+    }
+    
+    /* =========================
+    TÍTULOS
+    ========================= */
+    
+    h1 {
+    color: var(--cor-destaque);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    margin: 10px 0;
+    }
+    
+    h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    }
+    
+    h3 {
+    margin-bottom: 10px;
+    }
+    
+    section:first-child h2 {
+    color: var(--cor-texto);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: normal;
+    margin-bottom: 20px;
+    }
+    
+    /* =========================
+    COMPETÊNCIAS
+    ========================= */
+    
+    #competencias ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    }
+    
+    #competencias li {
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-left: 3px solid var(--cor-destaque);
+    padding: 18px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    
+    #competencias li:hover {
+    transform: translateY(-4px);
+    border-color: var(--cor-destaque);
+    }
+    
+    /* =========================
+    FORMAÇÃO
+    ========================= */
+    
+    article {
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 25px;
+    max-width: 700px;
+    }
+    
+    article p {
+    color: var(--cor-texto-secundario);
+    }
+    
+    /* =========================
+    RODAPÉ
+    ========================= */
+    
+    footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    }
+    
+    /* =========================
+    RESPONSIVIDADE
+    ========================= */
+    
+    @media (max-width: 700px) {
+    
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    section {
+        padding: 70px 0;
+    }
+    
+    section:first-child {
+        min-height: 80vh;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    }
